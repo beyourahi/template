@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    outline-color: #fb7185;
+    outline-offset: 0.4srem;
+}
+
+*::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: #fff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #fb7185;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.product-categories::-webkit-scrollbar {
+    height: 0;
+    background: transparent;
+}
+.product-categories::-webkit-scrollbar-thumb {
+    display: none;
+}
