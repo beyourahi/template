@@ -1,5 +1,9 @@
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+
+export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
 export const authOptions: NextAuthOptions = {
     providers: [

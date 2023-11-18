@@ -2,7 +2,7 @@
 
 ### Technologies Used
 
--   [Next.js 13.5](https://nextjs.org/)
+-   [Next.js](https://nextjs.org/)
 -   [TypeScript](https://www.typescriptlang.org/)
 -   [Tailwind CSS](https://tailwindcss.com/)
 -   [Next Auth](https://next-auth.js.org/)
