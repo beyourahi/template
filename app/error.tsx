@@ -5,6 +5,11 @@ import { useEffect } from "react";
 import Image from "next/image";
 import notfound from "public/error.svg";
 
+interface ErrorPage {
+    error: Error;
+    reset: () => void;
+}
+
 const Error = ({ error, reset }: ErrorPage) => {
     useEffect(() => console.error(error), [error]);
 

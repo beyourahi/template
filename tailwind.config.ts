@@ -1,8 +1,13 @@
 import type { Config } from "tailwindcss";
+import { nextui } from "@nextui-org/react";
 
 const config: Config = {
     darkMode: ["class"],
-    content: ["./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}"],
+    content: [
+        "./components/**/*.{ts,tsx}",
+        "./app/**/*.{ts,tsx}",
+        "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+    ],
     theme: {
         container: { center: true },
         extend: {
@@ -62,7 +67,7 @@ const config: Config = {
             }
         }
     },
-    plugins: [require("tailwindcss-animate")]
+    plugins: [require("tailwindcss-animate"), nextui()]
 };
 
 export default config;

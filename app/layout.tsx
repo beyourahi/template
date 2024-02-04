@@ -4,7 +4,6 @@ import { Providers } from "./providers";
 import { PropsWithChildren } from "react";
 import { cn } from "lib";
 import { Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
 
 const font = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -14,15 +13,13 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: PropsWithChildren) => (
-    <ClerkProvider>
-        <html lang="en" className="light scroll-smooth">
-            <body className={cn("antialiased", font.className)}>
-                <Providers>
-                    <main>{children}</main>
-                </Providers>
-            </body>
-        </html>
-    </ClerkProvider>
+    <html lang="en" className="scroll-smooth light">
+        <body className={cn("antialiased", font.className)}>
+            <Providers>
+                <main>{children}</main>
+            </Providers>
+        </body>
+    </html>
 );
 
 export default RootLayout;
