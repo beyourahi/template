@@ -1,12 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Providers } from "./providers";
+import { GeistSans } from "geist/font/sans";
 import { PropsWithChildren } from "react";
 import { cn } from "lib";
-import { Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
-
-const font = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
     title: "Web Template",
@@ -14,15 +10,9 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: PropsWithChildren) => (
-    <ClerkProvider>
-        <html lang="en" className="light scroll-smooth">
-            <body className={cn("antialiased", font.className)}>
-                <Providers>
-                    <main>{children}</main>
-                </Providers>
-            </body>
-        </html>
-    </ClerkProvider>
+    <html lang="en" className={cn("light scroll-smooth", GeistSans.className)}>
+        <body className="antialiased">{children}</body>
+    </html>
 );
 
 export default RootLayout;
